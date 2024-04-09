@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main,
+.square-content,
+.new-game-button {
+  color: #fff;
+}
+
+.main,
+.square {
+  background-color: #020105e7;
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.new-game-button,
+.square {
+  cursor: pointer;
+}
+
+.new-game-button {
+  font-size: large;
+  padding: 1em;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 132, 255, 0.432);
+}
+
+.board {
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  border: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.square,
+.turn-indicator-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 130px;
+  height: 130px;
+}
+
+.square-content {
+  font-size: 2.5em;
+}
+
+.turn-indicator-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  grid-template-areas:
+    "indicator-title indicator-title"
+    "x-indicator o-indicator";
+}
+
+.turn-indicator-title {
+  grid-area: indicator-title;
+}
+
+.turn-indicator-element {
+  place-items: center;
+  padding: 0.5em;
+  font-size: 1.7em;
+}
+
+.turn-active {
+  background-color: rgba(0, 132, 255, 0.432);
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .board {
+    width: 81.5%;
+  }
+}
