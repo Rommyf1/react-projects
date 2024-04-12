@@ -11,7 +11,7 @@ export default function App() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-6 max-w-5xl mx-auto">
+    <main className="min-h-screen w-5/6 flex flex-col items-center justify-center gap-6 mx-auto md:max-w-5xl">
       <h1 className="text-sky-700">Aplicación de Gatitos</h1>
       <article className="flex flex-col items-center gap-4">
         <img
