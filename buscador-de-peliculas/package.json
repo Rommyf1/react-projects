@@ -4,6 +4,12 @@
   "version": "1.0.0",
   "author": "Rommy Fernández",
   "type": "module",
+  "keywords": [
+    "movies",
+    "peliculas",
+    "buscador",
+    "imdb"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
