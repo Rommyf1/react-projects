@@ -1,6 +1,7 @@
 {
-  "name": "ejercicio1-react-tweet",
+  "name": "react-tweet",
   "private": true,
+  "author": "Rommy Fernández",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
