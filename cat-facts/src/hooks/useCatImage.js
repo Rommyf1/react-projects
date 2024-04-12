@@ -14,11 +14,11 @@ export default function useCatImage({ catFact }) {
 
     const firstWord = getFirstWord(catFact);
     const endpointURL = `${CATS_RANDOM_IMAGE_API_LINK}${firstWord}?json=true`;
-    const property = "url";
+    const property = "_id";
 
     getFilteredData({ endpointURL, property })
       .then((imageIdentifier) =>
-        setCatImageLink(`${CATS_IMAGE_ENDPOINT}${imageIdentifier}`)
+        setCatImageLink(`${CATS_IMAGE_ENDPOINT}/${imageIdentifier}/says/${firstWord}`)
       )
       .catch((error) => console.log(error));
   }, [catFact]);
