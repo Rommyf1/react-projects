@@ -1,3 +1,5 @@
+import SocialMediaIcon from "../icons/SocialMediaIcon";
+
 export default function SocialMediaShareQuote({
   primaryColor,
   socialMediaAction,
@@ -15,11 +17,7 @@ export default function SocialMediaShareQuote({
         className="social-media-button"
         href={socialMediaURL}
       >
-        <img
-          alt={`icono de ${socialMedia}`}
-          className="social-media-icon"
-          src={`./${socialMedia}Icon.svg`}
-        />
+        <SocialMediaIcon primaryColor="#fff" socialMedia={socialMedia} />
       </a>
     </div>
   );
