@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { colors } from "./constants/constants";
 import { getColor } from "./utils/quotes";
-import { getRandomQuote } from "./utils/quotes";
+import { getQuotesData } from "./utils/quotes";
 import QuoteBox from "./components/QuoteBox";
 
 export default function App() {
@@ -11,12 +11,8 @@ export default function App() {
     primaryColor: getColor(colors),
   });
 
-  const getQuotesData = async () => {
-    const response = await fetch(
-      "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
-    );
-    const quoteData = await response.json();
-    const randomQuote = getRandomQuote(quoteData);
+  const setNewQuote = async () => {
+    const randomQuote = await getQuotesData();
     setQuotesData({
       quote: randomQuote.quote,
       author: randomQuote.author,
@@ -37,7 +33,7 @@ export default function App() {
         quote={quotesData.quote}
         author={quotesData.author}
         primaryColor={quotesData.primaryColor}
-        newQuote={getQuotesData}
+        newQuote={setNewQuote}
       />
     </div>
   );
