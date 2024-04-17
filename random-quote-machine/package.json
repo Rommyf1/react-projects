@@ -1,6 +1,7 @@
 {
   "name": "random-quote-machine",
   "private": true,
+  "author": "Rommy Fernández",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
