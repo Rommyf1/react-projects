@@ -1,0 +1,104 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app,
+.drum-machine,
+.display-container,
+.drumpad-container,
+.drumpad-row,
+.power-container,
+.mode-container,
+audio,
+.display-wrapper {
+  display: flex;
+}
+
+.app,
+.display-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.drum-machine {
+  width: 80vw;
+  height: 40vh;
+  background-color: green;
+}
+
+.drumpad-container,
+.display-container {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+}
+
+.drumpad-container {
+  background-color: red;
+}
+
+.display-container,
+.drumpad-container {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.power-container,
+.mode-container {
+  width: 10%;
+  height: 8%;
+  background-color: green;
+}
+
+.drumpad-row {
+  width: 100%;
+  height: 27%;
+  justify-content: space-evenly;
+}
+
+.drum-pad {
+  width: 25%;
+  height: 100%;
+}
+
+.power-status,
+.mode-status {
+  width: 45%;
+  height: 100%;
+  background-color: orange;
+}
+
+.audio-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+}
+
+.display-wrapper {
+  background-color: orange;
+  height: 15%;
+}
