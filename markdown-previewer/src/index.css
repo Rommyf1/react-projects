@@ -147,3 +147,24 @@ h2 {
     transition: 1.5s;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .editor-wrapper {
+    background-color: #242424;
+  }
+
+  .preview-wrapper {
+    background-color: rgb(36 36 36 / 0.9);
+    color: #fff;
+  }
+
+  th {
+    background-color: #7209b7;
+  }
+
+  code,
+  blockquote,
+  td {
+    background-color: rgb(79, 62, 94);
+  }
+}
